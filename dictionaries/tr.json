@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "home": "Ana Sayfa",
+    "about": "Hakkında"
+  },
+  "page": {
+    "home": {
+      "title": "NextJs i18n' e hosgeldiniz!",
+      "description": "Bu, NextJs i18n' e hosgeldiniz sayfasıdır."
+    },
+    "about": {
+      "title": "Hakkında",
+      "description": "Bu, NextJs i18n' e hosgeldiniz sayfasıdır."
+    }
+  }
+}
