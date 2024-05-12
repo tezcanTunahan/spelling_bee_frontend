@@ -1,5 +1,7 @@
+import Game from '@/components/game/game';
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/lib/dictionary';
+import Title from '@/components/ui/title';
 
 interface HomeProps {
   params: { lang: Locale };
@@ -10,8 +12,11 @@ export default async function Home({ params: { lang } }: HomeProps) {
 
   return (
     <div>
-      <h1>{page.home.title}</h1>
-      {lang === 'en' ? <p>en</p> : <p>tr</p>}
+      <Title>{page.home.title}</Title>
+
+      <div className='flex items-center justify-center'>
+        <Game lang={lang} />
+      </div>
     </div>
   );
 }

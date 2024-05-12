@@ -8,6 +8,10 @@
       "title": "Welcome to NextJs i18n",
       "description": "Internationalization in NextJs 13 App router"
     },
+    "game": {
+      "title": "Spelling Bee Game",
+      "description": "This is the game page"
+    },
     "about": {
       "title": "About Us",
       "description": "This is the about page"

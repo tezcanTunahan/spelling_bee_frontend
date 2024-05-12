@@ -18,6 +18,7 @@ export default async function Header({ lang }: { lang: Locale }) {
           </li>
         </ul>
         <LocaleSwitcher />
+        {lang === 'en' ? <p>en</p> : <p>tr</p>}
       </nav>
     </header>
   );
