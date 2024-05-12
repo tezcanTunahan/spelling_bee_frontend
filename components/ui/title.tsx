@@ -12,7 +12,7 @@ interface TitleProps {
 
 export default function Title({ className, children, type = 'h1' }: TitleProps) {
   const titleStyles = {
-    h1: 'text-2xl font-bold md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl',
+    h1: 'text-xl font-bold md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl',
     h2: 'text-base font-bold md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl',
   };
 

@@ -17,9 +17,7 @@ export default async function Home({ params: { lang } }: HomeProps) {
         <p className='text-2xl text-center'>{new Date().toLocaleDateString(lang)}</p>
       </div>
 
-      <div className='flex items-center justify-center'>
-        <Game lang={lang} />
-      </div>
+      <Game lang={lang} />
     </div>
   );
 }

@@ -12,7 +12,7 @@ export default function Letter({ children, className, onClick }: LetterProps) {
     <div
       onClick={onClick}
       className={cn(
-        'w-16 h-16 text-center flex items-center justify-center bg-custom-grey text-black clip-hexagon text-2xl cursor-pointer',
+        'w-24 h-20 text-center flex items-center justify-center bg-custom-grey text-black clip-hexagon text-3xl font-bold cursor-pointer',
         className
       )}>
       {children}

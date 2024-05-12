@@ -12,12 +12,12 @@ export default function InputtedLetters({ value, hiveCellArr }: InputtedLettersP
 
   return (
     <div className='flex items-center justify-center'>
-      <span className='text-4xl'>
+      <span className='text-3xl'>
         {valueArr.map((letter, index) => {
           return (
             <span
               key={index}
-              className={cn('text-4xl font-bold text-gray-300', {
+              className={cn('font-bold text-gray-300', {
                 'text-custom-yellow': letter === hiveCellArr[middleIndexOfHiveCellArr],
                 'text-black': hiveCellArr.includes(letter) && letter !== hiveCellArr[middleIndexOfHiveCellArr],
               })}>
@@ -26,7 +26,8 @@ export default function InputtedLetters({ value, hiveCellArr }: InputtedLettersP
           );
         })}
       </span>
-      <span className='animate-blink w-1 h-10 bg-custom-yellow'></span>
+      <span className='animate-blink w-[3px] h-10 bg-custom-yellow'></span>
+      {valueArr.length === 0 && <span className='text-3xl font-normal text-gray-400'>Type or click</span>}
     </div>
   );
 }
