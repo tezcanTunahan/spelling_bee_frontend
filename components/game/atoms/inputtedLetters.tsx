@@ -26,7 +26,7 @@ export default function InputtedLetters({ value, hiveCellArr }: InputtedLettersP
           );
         })}
       </span>
-      <span className='animate-blink w-2 h-10 bg-custom-yellow'></span>
+      <span className='animate-blink w-1 h-10 bg-custom-yellow'></span>
     </div>
   );
 }

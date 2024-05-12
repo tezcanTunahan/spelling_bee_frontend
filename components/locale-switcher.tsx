@@ -4,8 +4,9 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import { i18n } from '@/i18n.config';
+import { cn } from '@/helpers/utils';
 
-export default function LocaleSwitcher() {
+export default function LocaleSwitcher({ lang }: { lang: string }) {
   const pathName = usePathname();
 
   const redirectedPathName = (locale: string) => {
@@ -20,7 +21,9 @@ export default function LocaleSwitcher() {
       {i18n.locales.map((locale) => {
         return (
           <li key={locale}>
-            <Link href={redirectedPathName(locale)} className='rounded-md border bg-black px-3 py-2 text-white'>
+            <Link
+              href={redirectedPathName(locale)}
+              className={cn('rounded-md border bg-black px-3 py-2 text-white', locale === lang ? 'bg-gray-900' : 'bg-gray-700')}>
               {locale}
             </Link>
           </li>
