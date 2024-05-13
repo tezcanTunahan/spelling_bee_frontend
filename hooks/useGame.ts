@@ -64,7 +64,14 @@ const useGame = ({ lang }: { lang: string }) => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       setIsTimerBegan(true);
-      if (isGameOver) return;
+      if (isGameOver) {
+        const notify = () =>
+          toast.error('Game is over! Please reset the game to play again.', {
+            duration: 2000,
+          });
+        notify();
+        return;
+      }
       if (e.key === 'Backspace') {
         setUserAnswerInput((currentInput) => currentInput.slice(0, -1));
       } else if (e.key === 'Enter') {
